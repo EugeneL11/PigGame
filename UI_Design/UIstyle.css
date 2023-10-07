@@ -1,0 +1,123 @@
+body {
+    font-family: 'Gabarito', sans-serif;
+    background-color: #feffdf;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: 'Gabarito', sans-serif;
+    background-color: #2E9CCA;
+    color: #FFF;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    border: 2px solid black;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    font-size: 100px;
+    font-weight: bold;
+    padding-top: 2vw;
+}
+.pig {
+    width: 8vw;
+    padding-top: 2vw;
+}
+.pig.left {
+    margin-right: auto;
+    padding-left: 5vw;
+}
+.pig.right {
+    margin-left: auto;
+    padding-right: 5vw;
+}
+
+.tools {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.btn {
+    font-size: 18px;
+    margin: 15px;
+    width: 10vw;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 50px;
+}
+.playerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0ab8d;
+    width: 35vw;
+    border-radius: 25px;
+    border: 3px solid black;
+    padding-bottom: 20px;
+}
+.count {
+    font-size: 30px;
+    padding: 1vw;
+    margin-top: -55px;
+    margin-bottom: 10px;
+}
+.playerName {
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+    padding: 15px;
+}
+.gameTotal {
+    text-align: center;
+    font-size: 7vw;
+    margin: 50px auto 30px;
+}
+.turnBox {
+    background-color: #f6e4ad;
+    border: 2px solid black;
+    border-radius: 7px;
+    width: 10vw;
+    padding: 15px;
+}
+.turnTitle {
+    text-align: center;
+    font-size: 25px;
+}
+.turnScore {
+    text-align: center;
+    font-size: 30px;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.diceFace {
+    width: 10vw;
+}
+.btn.mid {
+    width: 8vw;
+}
+
+.footer {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
