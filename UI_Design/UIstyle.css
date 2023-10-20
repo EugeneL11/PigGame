@@ -1,3 +1,9 @@
+/* Course: SENG 513 */
+/* Date: OCT 20, 2023 */
+/* Assignment 2 */
+/* Name: Eugene Lee */
+/* UCID: 30137489 */
+
 body {
     font-family: 'Gabarito', sans-serif;
     background-color: #feffdf;
@@ -29,8 +35,9 @@ button:hover {
     padding-top: 2vw;
 }
 .pig {
-    width: 8vw;
+    width: 90px;
     padding-top: 2vw;
+    height: auto;
 }
 .pig.left {
     margin-right: auto;
@@ -45,12 +52,13 @@ button:hover {
     display: flex;
     justify-content: center;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .btn {
     font-size: 18px;
     margin: 15px;
     width: 10vw;
+    text-align: center;
 }
 
 .content {
@@ -109,9 +117,6 @@ button:hover {
 .diceFace {
     width: 10vw;
 }
-.btn.mid {
-    width: 8vw;
-}
 
 .footer {
     background-color: grey;
@@ -120,4 +125,53 @@ button:hover {
     font-size: 20px;
     text-align: center;
     margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+    .btn {
+        font-size: 12px;
+    }
+    .diceFace {
+        width: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn {
+        width: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
+    .pig.left, .pig.right {
+        display: none;
+    }
+    .content {
+        gap: 2px;
+    }
+    .turnTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .playerName {
+        font-size: 7vw;
+    }
+    .header {
+        padding-top: 50px;
+    }
+    .footer {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .count {
+        font-size: 23px;
+        margin-top: -40px;
+    }
+    .gameTotal {
+        font-size: 20px;
+    }
 }
