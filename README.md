@@ -4,18 +4,18 @@ Game Title:
 - Pig
 
 Target Platform:
-- Desktop and Mobile
+- Desktop and Mobile (It is responsive!)
 
 Game Genre: 
 - Dice Probability
 
 Game Objective: 
-- the main objective of the game is to be the first of the two players to reach the target score, by rolling the die
+- the main objective of the game is to be the first of the two players to reach the target score, by rolling the dice
 
 Rules of the Game: 
 - Set the forbidden number between 1 - 6, and set the target number
 - Player 1 starts for the first game, and from then, the player who most recently won starts
-- In a turn, the player rolls a die. Everytime they roll, the value gets added to the turn total. The player can stop whenever they want, but can also continue to roll, until they roll the forbidden number. If they roll the forbidden number, their turn total gets set back to 0, and their turn ends. 
+- In a turn, the player rolls a dice. Everytime they roll, the value gets added to the turn total. The player can stop whenever they want, but can also continue to roll, until they roll the forbidden number. If they roll the forbidden number, their turn total gets set back to 0, and their turn ends. 
 - The players keep taking turns, until a player reaches the target score. 
 - If they reach the target score exactly, they get 2 points added to their record, and if they surpass it, they get one point added. 
 
@@ -36,6 +36,14 @@ Description of Functionalities:
     - change forbidden number: change the number that will end a player's turn and set their turn total to zero
     - progress bar: display and visualize each player's progress to the target score
     - roll histories & probabilities: display the previous few rolls and show the probabilities of each roll value up until that point
+
+Custom Anmiations, Interaction Mechanisms, and Algorithms:
+- I plan to implement animations for the dice rolling, and the dynamic progress bar also adds a nice animation
+- The abilities to change player names, target score, and the forbidden number are interaction mechanisms, and there are also plenty of other buttons that I implement to interact with users
+- I plan to use algorithms to compute the probabilities of the rolls in regards to the particular moment of the game to display the odds
+
+Complexity & Originality: 
+- I challenged myself greatly by implementing a lot of features that do not exist in the original Pig game. I added the ability to change player names, target score, and the forbidden number. I also added a progress bar for better visuals. I also plan to add roll histories & probabilities, and perhaps an option for different types of dice. 
 
 Citations/Attributions: 
 - Dice png: <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by WHY ARIF - Flaticon</a>
