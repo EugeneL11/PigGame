@@ -15,11 +15,12 @@ let player2Score;
 let turnTotal;
 let winCountPlayer1;
 let winCountPlayer2;
+let rulesPopUpVisible;
+let settingsPopUpVisible;
 
 // Function to initialize the game
 function initializeGame() {
     // Initialize game state and settings, e.g., player names, target score, forbidden number, scores, etc.
-    // Display the game rules pop-up
     // Update the UI to reflect initial game state
 }
 
@@ -35,15 +36,25 @@ function rollDice() {
 function endTurn() {
     // Add turnTotal to the currentPlayer's score
     // Check if the currentPlayer has reached or exceeded the target score
-    // If yes, declare the currentPlayer as the winner and update winCount
+    // If yes, declare the currentPlayer as the winner and update winCount and reset turnTotal
     // If not, switch players and reset turnTotal
     // Update the UI to reflect the new game state
+}
+
+// Function to toggle the visibility of the rules pop-up
+function toggleRulesPopUp() {
+    // Toggle the visibility of the rules pop-up, and display the rules to the user
 }
 
 // Function to reset the game score
 function resetScore() {
     // Reset player scores and win counts
     // Update the UI to reflect the new game state
+}
+
+// Function to toggle the visibility of the settings pop-up
+function toggleSettingsPopUp() {
+    // Toggle the visibility of the settings pop-up, and display the settings to the user
 }
 
 // Function to change player names
@@ -69,7 +80,7 @@ function changeForbiddenNumber() {
 
 // Function to display the game score/record
 function displayGameScore() {
-    // Display each player's score and win count
+    // Display each player's score / win count
     // Update the UI to reflect the game score/record
 }
 
@@ -82,9 +93,10 @@ function displayRollHistory() {
 
 // Function to update the progress bar
 function updateProgressBar() {
-    // Calculate the progress toward the target score
-    // Update the progress bar in the UI
+    // Calculate the progress toward the target score for each player
+    // Update the progress bar in the UI to display the progress of each player
 }
+
 
 // Event listeners to handle user interactions (e.g., roll button, end turn button, pop-up screens, etc.)
 

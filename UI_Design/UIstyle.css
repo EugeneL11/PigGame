@@ -57,7 +57,7 @@ button:hover {
 .btn {
     font-size: 18px;
     margin: 15px;
-    width: 10vw;
+    width: 12vw;
     text-align: center;
 }
 
@@ -109,10 +109,33 @@ button:hover {
     text-align: center;
     font-size: 30px;
 }
+
+.progress { 
+    background-color: antiquewhite; 
+    width: 85%; 
+    border-radius: 15px; 
+    margin-top: 20px;
+}
+.bar { 
+    background-color:limegreen; 
+    color: white; 
+    padding: 1%; 
+    text-align: center; 
+    font-size: 20px; 
+    border-radius: 15px; 
+}
+.bar.left { 
+    width: 76%; 
+}
+.bar.right {
+    width: 1%;
+}
+
 .middle {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 .diceFace {
     width: 10vw;
@@ -130,6 +153,17 @@ button:hover {
 @media (max-width: 760px) {
     .btn {
         font-size: 12px;
+    }
+    .header {
+        padding-top: 5vw;
+    }
+    .tools {
+        margin-top: 5vw;
+        margin-bottom: 7vw;
+    }
+    .tools .btn {
+        width: 15vw;
+        height: 50px;
     }
     .diceFace {
         width: 80px;

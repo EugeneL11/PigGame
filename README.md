@@ -1,10 +1,5 @@
 # PigGame
 
-Dice png link: <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by WHY ARIF - Flaticon</a>
-
-pig link: Attribution link: publicdomainq.net 
-
-
 Game Title:
 - Pig
 
@@ -35,10 +30,14 @@ Description of Functionalities:
     - roll dice button: roll the dice to get a value between 1 and 6
     - end turn button: end the player's current turn, adding the accumulated total turn value to the game total, begin the other player's turn
     - game score/record: display the number of wins each player has earned so far
+    - settings button: will bring up a pop-up screen that allows you to change player names, target score, and the forbidden number
     - change player names: allow the players to customize their display names
     - change target score: change the target score that the players must reach to win
     - change forbidden number: change the number that will end a player's turn and set their turn total to zero
     - progress bar: display and visualize each player's progress to the target score
     - roll histories & probabilities: display the previous few rolls and show the probabilities of each roll value up until that point
 
-focus more on the software parts. what button does what, and how does the game progress with them.
+Citations/Attributions: 
+- Dice png: <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by WHY ARIF - Flaticon</a>
+- pig png: publicdomainq.net
+- pig nose png: Emoji One, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons

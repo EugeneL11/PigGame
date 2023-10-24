@@ -7,3 +7,5 @@ GitHub Username: EugeneL11
 Link to Repository: https://github.com/EugeneL11/PigGame 
 
 Name of the Online Repository: PigGame
+
+* Everything necessary for A2 is in the UI_Design folder and the README.md *
