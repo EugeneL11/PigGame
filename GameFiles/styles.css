@@ -1,0 +1,211 @@
+/* Course: SENG 513 */
+/* Date: Nov 10, 2023 */
+/* Assignment 3 */
+/* Name: Eugene Lee */
+/* UCID: 30137489 */
+
+body {
+    font-family: 'Gabarito', sans-serif;
+    background-color: #feffdf;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    font-family: 'Gabarito', sans-serif;
+    background-color: #2E9CCA;
+    color: #FFF;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 15px;
+    text-align: center;
+    border: 2px solid black;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+}
+.logo {
+    font-size: 100px;
+    font-weight: bold;
+    padding-top: 2vw;
+}
+.pig {
+    width: 90px;
+    padding-top: 2vw;
+    height: auto;
+}
+.pig.left {
+    margin-right: auto;
+    padding-left: 5vw;
+}
+.pig.right {
+    margin-left: auto;
+    padding-right: 5vw;
+}
+
+.tools {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 50px;
+}
+.btn {
+    font-size: 18px;
+    margin: 15px;
+    width: 12vw;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 50px;
+}
+.playerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0ab8d;
+    width: 35vw;
+    border-radius: 25px;
+    border: 3px solid black;
+    padding-bottom: 20px;
+}
+.count {
+    font-size: 30px;
+    padding: 1vw;
+    margin-top: -55px;
+    margin-bottom: 10px;
+}
+.playerName {
+    text-align: center;
+    font-size: 35px;
+    margin: 0;
+    padding: 15px;
+}
+.gameTotal {
+    text-align: center;
+    font-size: 7vw;
+    margin: 50px auto 30px;
+}
+.turnBox {
+    background-color: #f6e4ad;
+    border: 2px solid black;
+    border-radius: 7px;
+    width: 10vw;
+    padding: 15px;
+}
+.turnTitle {
+    text-align: center;
+    font-size: 25px;
+}
+.turnScore {
+    text-align: center;
+    font-size: 30px;
+}
+
+.progress { 
+    background-color: antiquewhite; 
+    width: 85%; 
+    border-radius: 15px; 
+    margin-top: 20px;
+}
+.bar { 
+    background-color:limegreen; 
+    color: white; 
+    padding: 1%; 
+    text-align: center; 
+    font-size: 20px; 
+    border-radius: 15px; 
+}
+.bar.left { 
+    width: 76%; 
+}
+.bar.right {
+    width: 12%;
+}
+
+.middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.diceFace {
+    width: 10vw;
+}
+
+.footer {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+    .btn {
+        font-size: 12px;
+    }
+    .header {
+        padding-top: 5vw;
+    }
+    .tools {
+        margin-top: 5vw;
+        margin-bottom: 7vw;
+    }
+    .tools .btn {
+        width: 15vw;
+        height: 50px;
+    }
+    .diceFace {
+        width: 80px;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn {
+        width: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
+        text-align: center;
+    }
+    .pig.left, .pig.right {
+        display: none;
+    }
+    .content {
+        gap: 2px;
+    }
+    .turnTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 500px) {
+    .playerName {
+        font-size: 7vw;
+    }
+    .header {
+        padding-top: 50px;
+    }
+    .footer {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .count {
+        font-size: 23px;
+        margin-top: -40px;
+    }
+    .gameTotal {
+        font-size: 20px;
+    }
+}
