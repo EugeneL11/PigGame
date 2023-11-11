@@ -14,16 +14,15 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700;800;900&display=swap');
     </style>
-    <script src "script.js"></script>
     <title>Pig</title>
     <link rel="icon" href="../images/pig3.png">
 </head>
 <body>
     <div class="header">
-        <img src="../images/pig1.png" alt="A  cute pig" class="pig left">
+        <img src="../images/pig1.png" alt="A cute pig" class="pig left">
         <div class="logo">PIG</div>
         <img src="../images/pig3.png" alt="pig nose logo" class="pig middle">
-        <img src="../images/pig1.png" alt="A  cute pig" class="pig right">
+        <img src="../images/pig1.png" alt="A cute pig" class="pig right">
     </div>
 
     <div class="tools">
@@ -37,10 +36,10 @@
         <div class="playerBox left">
             <div class="count left">Wins: 3</div>
             <h3 class="playerName">Player 1</h3>
-            <div class="gameTotal">57</div>
+            <div id="p1GT" class="gameTotal">0</div>
             <div class="turnBox">
                 <div class="turnTitle">Turn Total</div>
-                <div class="turnScore">0</div>
+                <div id="p1TT" class="turnScore">0</div>
             </div>
             <div class="progress"> 
                 <div class="bar left">76%</div> 
@@ -49,16 +48,17 @@
         <div class="middle">
             <img src="../images/dice1.png" alt="a dice face" class="diceFace">
             <img src="../images/dice5.png" alt="a dice face" class="diceFace">
-            <button class="btn mid roll">Roll Dice</button>
-            <button class="btn mid stop">Stop</button>
+            <div id="rollResult"></div>
+            <button id="rollButton" class="btn mid roll">Roll Dice</button>
+            <button id="stopButton" class="btn mid stop">Stop</button>
         </div>
         <div class="playerBox right">
             <div class="count right">Wins: 1</div>
             <h3 class="playerName">Player 2</h3>
-            <div class="gameTotal">09</div>
+            <div id="p2GT" class="gameTotal">0</div>
             <div class="turnBox">
                 <div class="turnTitle">Turn Total</div>
-                <div class="turnScore">21</div>
+                <div id="p2TT" class="turnScore">0</div>
             </div>
             <div class="progress"> 
                 <div class="bar right">12%</div> 
@@ -67,5 +67,7 @@
     </div>
 
     <!--<div class="footer">Eugene Lee - SENG 513 Assignment 2</div>-->
-</body>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
