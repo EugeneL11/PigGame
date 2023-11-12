@@ -18,6 +18,14 @@ let settingsPopUpVisible;
 const roll = document.getElementById("rollButton");
 roll.addEventListener("click", rollDice);
 
+const leftTri = document.getElementById("leftT");
+const rightTri = document.getElementById("rightT");
+rightTri.style.display = "none";
+
+const leftBox = document.getElementById("pBoxL");
+leftBox.style.backgroundColor = "#f0857d";
+const rightBox = document.getElementById("pBoxR");
+
 let rollResult = document.getElementById("rollResult");
 
 let forbiddenNum = 3;
@@ -35,12 +43,33 @@ let p1TotalVal = 0;
 let p2GameTotal = document.getElementById("p2GT");
 let p2TotalVal = 0;
 
+const newGame = document.getElementById("newGameButton");
+newGame.addEventListener("click", initializeGame)
+
+let p1WinCount = document.getElementById("p1WC");
+let p1WinCountVal = 0;
+let p2WinCount = document.getElementById("p2WC");
+let p2WinCountVal = 0;
+const reset = document.getElementById("resetButton");
+reset.addEventListener("click", resetScore);
+
 const end = document.getElementById("stopButton");
 end.addEventListener("click", endTurn);
 
 // Function to initialize the game
 function initializeGame() {
     // Initialize game state and settings, e.g., player names, target score, forbidden number, scores, etc.
+    p1TotalVal = 0;
+    p1GameTotal.innerHTML = p1TotalVal;
+    p2TotalVal = 0;
+    p2GameTotal.innerHTML = p2TotalVal;
+    turnTotal = 0;
+    p1TurnTotal.innerHTML = turnTotal;
+    p2TurnTotal.innerHTML = turnTotal;
+    
+    turnCheck();
+    resetScore();
+   
     // Update the UI to reflect initial game state
 
 }
@@ -65,6 +94,7 @@ function rollDice() {
             p1TurnTotal.innerHTML = 0; //other player turn total should be 0
         }
         p1Turn = !p1Turn; //switch players
+        turnCheck();
     } else {
         // Otherwise, add the roll result to turnTotal and update the UI
         turnTotal += rollValue;
@@ -99,8 +129,12 @@ function endTurn() {
             setTimeout(() => {                
                 if (p1TotalVal >= 30) {
                     alert("Player 1 Wins!");
+                    p1WinCountVal += 1;
+                    p1WinCount.innerHTML = "Wins: " + p1WinCountVal;
                 } else {
                     alert("Player 2 Wins!");
+                    p2WinCountVal += 1;
+                    p2WinCount.innerHTML = "Wins: " + p2WinCountVal;
                 }
                 p1TotalVal = 0;
                 p1GameTotal.innerHTML = p1TotalVal;
@@ -111,6 +145,7 @@ function endTurn() {
 
         //switch players
         p1Turn = !p1Turn;
+        turnCheck();
 
         // Check if the currentPlayer has reached or exceeded the target score
         // If yes, declare the currentPlayer as the winner and update winCount and reset turnTotal
@@ -118,6 +153,20 @@ function endTurn() {
         // Update the UI to reflect the new game state
     }
 
+}
+
+function turnCheck() {
+    if (p1Turn === true) {
+        leftTri.style.display = "block";
+        rightTri.style.display = "none";
+        leftBox.style.backgroundColor = "#f0857d";
+        rightBox.style.backgroundColor = "#f0ab8d";
+    } else {
+        rightTri.style.display = "block";
+        leftTri.style.display = "none";
+        leftBox.style.backgroundColor = "#f0ab8d";
+        rightBox.style.backgroundColor = "#f0857d";
+    }
 }
 
 // Function to toggle the visibility of the rules pop-up
@@ -128,6 +177,11 @@ function toggleRulesPopUp() {
 // Function to reset the game score
 function resetScore() {
     // Reset player scores and win counts
+    p1WinCountVal = 0;
+    p1WinCount.innerHTML = "Wins: 0";
+    p2WinCountVal = 0;
+    p2WinCount.innerHTML = "Wins: 0";
+
     // Update the UI to reflect the new game state
 }
 

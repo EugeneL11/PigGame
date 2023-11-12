@@ -141,6 +141,13 @@ button:hover {
     width: 10vw;
 }
 
+.triangles {
+    display: flex;
+}
+.tri {
+    width: 5vw;
+}
+
 .footer {
     background-color: grey;
     color: white;

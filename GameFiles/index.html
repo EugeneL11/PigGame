@@ -27,14 +27,14 @@
 
     <div class="tools">
         <button class="btn rules">Rules</button>
-        <button class="btn newGame">New Game</button>
-        <button class="btn resetScore">Reset Score</button>
+        <button id="newGameButton" class="btn newGame">New Game</button>
+        <button id="resetButton" class="btn resetScore">Reset Score</button>
         <button class="btn settings">Settings</button>
     </div>
 
     <div class="content">
-        <div class="playerBox left">
-            <div class="count left">Wins: 3</div>
+        <div id="pBoxL" class="playerBox left">
+            <div id="p1WC" class="count left">Wins: 0</div>
             <h3 class="playerName">Player 1</h3>
             <div id="p1GT" class="gameTotal">0</div>
             <div class="turnBox">
@@ -49,11 +49,15 @@
             <img src="../images/dice1.png" alt="a dice face" class="diceFace">
             <img src="../images/dice5.png" alt="a dice face" class="diceFace">
             <div id="rollResult"></div>
+            <div class="triangles">
+              <img src="../images/leftTri.png" alt="left pointing triangle" id="leftT" class="left tri">
+              <img src="../images/rightTri.png" alt="right pointing triangle" id="rightT" class="right tri">
+            </div>
             <button id="rollButton" class="btn mid roll">Roll Dice</button>
             <button id="stopButton" class="btn mid stop">Stop</button>
         </div>
-        <div class="playerBox right">
-            <div class="count right">Wins: 1</div>
+        <div id="pBoxR" class="playerBox right">
+            <div id="p2WC" class="count right">Wins: 0</div>
             <h3 class="playerName">Player 2</h3>
             <div id="p2GT" class="gameTotal">0</div>
             <div class="turnBox">

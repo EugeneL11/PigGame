@@ -49,3 +49,7 @@ Citations/Attributions:
 - Dice png: <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by WHY ARIF - Flaticon</a>
 - pig png: publicdomainq.net
 - pig nose png: Emoji One, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons
+
+
+right and left arrow:
+- WhosAsking, Public domain, via Wikimedia Commons 
