@@ -117,6 +117,17 @@ body.modalOpened {
     flex-direction: column;
     gap: 10px;
 }
+.modalBody.rule {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.ruleBox {
+    text-align: left;
+    line-height: 2;
+}
+.bomb {
+    color: #FF3131;
+}
 
 .content {
     display: flex;
@@ -209,14 +220,6 @@ body.modalOpened {
     width: 5vw;
 }
 
-.footer {
-    background-color: grey;
-    color: white;
-    padding: 20px;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 0;
-}
 
 @media (max-width: 760px) {
     .btn {

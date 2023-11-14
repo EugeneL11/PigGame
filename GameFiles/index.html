@@ -33,9 +33,16 @@
     </div>
 
     <div id="rulesModal" class="modal">
-      <div class="modalBody">
+      <div class="modalBody rule">
           <h1>RULES</h1>
-          <div>These are the rules...</div>
+          <h4>These are the rules...</h4>
+          <div class="ruleBox">
+            <div>- In a turn, the player rolls a dice. Everytime they roll, the value gets added to the turn total. The player can stop whenever they want, but can also continue to roll, until they roll the <span class="bomb">BOMB</span> number. If they roll the <span class="bomb">BOMB</span> number, their turn total gets set back to 0, and their turn ends. </div>
+            <div>- The players keep taking turns, until one reaches the target score. </div>
+            <div>- The default <span class="bomb">BOMB</span> number is 3, and the default target number is 50 (can be changed in the settings)</div>
+            <div>- Player 1 starts for the first game, and from then, the player who most recently lost starts</div>
+            <div>- If a player reaches the exact target score, they get 2 points added to their record, and if they surpass it, they get one point added. </div>
+          </div>
           <button onclick="closeModal()" class="closeBtn">Close</button>
       </div>
     </div>
@@ -69,7 +76,7 @@
     <div id="winnerModal" class="modal">
       <div class="modalBody">
           <h3 id="winner"></h3>
-          <div id="winMsg"></div>
+          <div id="winMsg"></div>          
           <button onclick="closeModal()" class="closeBtn">Close</button>
       </div>
     </div>
@@ -117,8 +124,6 @@
             </div> 
         </div>
     </div>
-
-    <!--<div class="footer">Eugene Lee - SENG 513 Assignment 2</div>-->
 
     <script type="text/javascript" src="script.js"></script>
   </body>

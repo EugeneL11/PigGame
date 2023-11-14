@@ -4,17 +4,14 @@
 // Name: Eugene Lee
 // UCID: 30137489 
 
-// Define global variables for game state and settings
 
+// Define global variables for game state and settings
 const roll = document.getElementById("rollButton");
-roll.addEventListener("click", rollDice);
 
 const leftTri = document.getElementById("leftT");
 const rightTri = document.getElementById("rightT");
-rightTri.style.display = "none";
 
 const leftBox = document.getElementById("pBoxL");
-leftBox.style.backgroundColor = "#f0857d";
 const rightBox = document.getElementById("pBoxR");
 
 let bombNum = 3;
@@ -37,17 +34,14 @@ let p2GameTotal = document.getElementById("p2GT");
 let p2TotalVal = 0;
 
 const newGame = document.getElementById("newGameButton");
-newGame.addEventListener("click", restartGame);
 
 let p1WinCount = document.getElementById("p1WC");
 let p1WinCountVal = 0;
 let p2WinCount = document.getElementById("p2WC");
 let p2WinCountVal = 0;
 const reset = document.getElementById("resetButton");
-reset.addEventListener("click", resetScore);
 
 const end = document.getElementById("stopButton");
-end.addEventListener("click", endTurn);
 
 let leftBar = document.getElementById("leftBar");
 let leftVal = 0;
@@ -65,11 +59,26 @@ let winnerModal = document.getElementById("winnerModal");
 let winner = document.getElementById("winner");
 let winMsg = document.getElementById("winMsg");
 
+//for the dice
+let rollValue;
+let rolls;
+const d1 = document.getElementById("d1");
+const d2 = document.getElementById("d2");
+const d3 = document.getElementById("d3");
+const d4 = document.getElementById("d4");
+const d5 = document.getElementById("d5");
+const d6 = document.getElementById("d6");
 
 // Function to initialize the game
 function initializeGame() {
     // Initialize game state and settings, e.g., player names, target score, forbidden number, scores, etc.
-
+    roll.addEventListener("click", rollDice);
+    rightTri.style.display = "none";
+    leftBox.style.backgroundColor = "#f0857d";
+    newGame.addEventListener("click", restartGame);
+    reset.addEventListener("click", resetScore);
+    end.addEventListener("click", endTurn);
+    d1.style.display = "block";
 }
 
 function restartGame() {
@@ -86,15 +95,6 @@ function restartGame() {
     resetScore();
 }
 
-let rollValue;
-let rolls;
-const d1 = document.getElementById("d1");
-const d2 = document.getElementById("d2");
-const d3 = document.getElementById("d3");
-const d4 = document.getElementById("d4");
-const d5 = document.getElementById("d5");
-const d6 = document.getElementById("d6");
-d1.style.display = "block";
 // Function to roll the dice
 async function rollDice() {
     // Generate a random dice roll result (1 to 6)
@@ -351,3 +351,4 @@ function updateProgressBar() {
 // Event listeners to handle user interactions (e.g., roll button, end turn button, pop-up screens, etc.)
 
 // Call initializeGame() to start the game
+initializeGame();
