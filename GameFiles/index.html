@@ -30,6 +30,7 @@
         <button id="newGameButton" class="btn newGame">New Game</button>
         <button id="resetButton" class="btn resetScore">Reset Score</button>
         <button onclick="openModal('settingsModal')" class="btn settings">Settings</button>
+        <button onclick="openModal('historyModal')" class="btn rollHistory">Roll History</button>
     </div>
 
     <div id="rulesModal" class="modal">
@@ -78,6 +79,16 @@
           <h3 id="winner"></h3>
           <div id="winMsg"></div>          
           <button onclick="closeModal('winnerModal')" class="closeBtn">Close</button>
+      </div>
+    </div>
+
+    <div id="historyModal" class="modal">
+      <div class="modalBody histMod">
+          <h1>ROLL HISTORY</h1>
+          <h3 id="pastRolls"></h3>     
+          <h3 id="mostRolled">HOTTEST NUMBER: </h3>
+          <h3 id="leastRolled">COLDEST NUMBER: </h3>     
+          <button onclick="closeModal('historyModal')" class="closeBtn">Close</button>
       </div>
     </div>
 

@@ -35,15 +35,15 @@ Description of Functionalities:
     - change target score: change the target score that the players must reach to win
     - change bomb number: change the number that will end a player's turn and set their turn total to zero
     - progress bar: display and visualize each player's progress to the target score
-    - roll histories & probabilities: display the previous few rolls and show the probabilities of each roll value up until that point
+    - roll history: display the previous rolls each game and show the most and least frequent roll values
 
 Custom Anmiations, Interaction Mechanisms, and Algorithms (indicated in code):
 - I implemented animations for the dice rolling, the dynamic progress bar that shows the player's percentage to the target score, an animation for button hovers, a pop-up screen for winners, settings, and rules, and an arrow & background color change to indicate the current player.
-- The abilities to roll a dice, end a turn, reset score, and restart game are all interation mechanisms with the user. On top of that, the ability to change player names, target score, and the bomb number further expand the user interaction and make the game more engaging and useful.
-- There are algorithms and logic used throughout the whole code to keep all the states in check and it running smoothly. Some of these include generating the random number and displaying the correct dice face, ending a turn and calculating new total score / checking for wins / calculating new score, calculating correct percentage and updating the progress bar accordingly.
+- The abilities to roll a dice, end a turn, reset score, and restart game are all interation mechanisms with the user. On top of that, the ability to change player names, target score, and the bomb number further expand the user interaction and make the game more engaging and useful. I also have a roll history, and show the hottest and coldest roll values.
+- There are algorithms and logic used throughout the whole code to keep all the states in check and it running smoothly. Some of these include generating the random number and displaying the correct dice face, ending a turn and calculating new total score / checking for wins / calculating new score, calculating correct percentage and updating the progress bar accordingly. I also use complex logic to calculate for the most and least frequent roll values.
 
 Complexity & Originality: 
-- I challenged myself greatly by implementing a lot of features that do not exist in the original Pig game. I added the ability to change player names, target score, and the bomb number. I also added a progress bar for better visuals. There are lots of logic involved to keep all the game states in check. I also plan to add roll histories & probabilities, and perhaps an option for different types of dice. 
+- I challenged myself greatly by implementing a lot of features that do not exist in the original Pig game. I added the ability to change player names, target score, and the bomb number. I also added a progress bar for better visuals. There are lots of logic involved to keep all the game states in check. I also added roll history where I keep track of the hottest and coldest numbers.
 
 Citations/Attributions: 
 - Dice png: <a href="https://www.flaticon.com/free-icons/dice" title="dice icons">Dice icons created by WHY ARIF - Flaticon</a>

@@ -58,6 +58,11 @@ let winnerModal = document.getElementById("winnerModal");
 let winner = document.getElementById("winner");
 let winMsg = document.getElementById("winMsg");
 
+let pastRolls = document.getElementById("pastRolls");
+let historyArr = [];
+let mostRolled = document.getElementById("mostRolled");
+let leastRolled = document.getElementById("leastRolled");
+
 //for the dice
 let rollValue;
 let rolls;
@@ -92,6 +97,12 @@ function restartGame() {
     turnTotal = 0;
     p1TurnTotal.innerHTML = turnTotal;
     p2TurnTotal.innerHTML = turnTotal;
+
+    //reset the roll history
+    pastRolls.innerHTML = "";
+    historyArr = [];
+    mostRolled.innerHTML = "HOTTEST NUMBER: ";
+    leastRolled.innerHTML = "COLDEST NUMBER: "
     
     turnCheck(); //show the current player
     progressBar(); //update progress bar
@@ -102,6 +113,17 @@ function restartGame() {
 async function rollDice() {
     //await for the randNumGen to finish executing and come to one final value before proceeding
     rollValue = await randNumGen();
+    //update the roll history
+    if (pastRolls.innerHTML != "") { //if not empty
+        pastRolls.innerHTML = pastRolls.innerHTML + ", " + rollValue;
+    } else { //if empty
+        pastRolls.innerHTML = rollValue; 
+    }
+    historyArr.push(rollValue); //add value to the array
+    let historyResult = analyzeHistory(historyArr);
+    //update the visual
+    mostRolled.innerHTML = "HOTTEST NUMBER: " + historyResult.mostOccurred;
+    leastRolled.innerHTML = "COLDEST NUMBER: " + historyResult.leastOccurred;
     // If the roll result is equal to the bomb number, reset turnTotal to 0, end the turn, and switch players
     if (rollValue == bombNum) {
         turnTotal = 0; //reset turn total
@@ -128,6 +150,25 @@ async function rollDice() {
         }
     }
 }
+
+// Function to calculate the most and least frequent roll values
+function analyzeHistory(numbers) {
+    let frequencyMap = {};
+    // Initialize the frequency map with counts set to zero for numbers 1 to 6
+    for (let i = 1; i <= 6; i++) {
+        frequencyMap[i] = 0;
+    }
+    // Count the frequency of each number in the array
+    numbers.forEach((number) => {
+        frequencyMap[number]++;
+    });
+    // Find the most occurring element
+    let mostOccurred = Object.keys(frequencyMap).reduce((a, b) => frequencyMap[a] > frequencyMap[b] ? a : b);
+    // Find the least occurring element
+    let leastOccurred = Object.keys(frequencyMap).reduce((a, b) => frequencyMap[a] < frequencyMap[b] ? a : b);
+    return { mostOccurred, leastOccurred };
+}
+
 
 // Function to display the dice shuffle and randomize one value (Custom Animation) (Custom Algorithm)
 function randNumGen() {
@@ -211,6 +252,11 @@ function endTurn() {
                 p2TotalVal = 0;
                 p2GameTotal.innerHTML = p2TotalVal;
                 progressBar();
+                //reset the roll history
+                pastRolls.innerHTML = "";
+                historyArr = [];
+                mostRolled.innerHTML = "HOTTEST NUMBER: ";
+                leastRolled.innerHTML = "COLDEST NUMBER: "
             }, 0);
         }
 

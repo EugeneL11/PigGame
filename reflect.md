@@ -3,7 +3,7 @@ SENG 513 Assignment 3 Reflection - Eugene Lee (30137489)
 - Had a slow start initally with the learning curve, but got smoother as I learned the DOM structure of JavaScript and got used to the syntax
 - First fully fleshed out game I have ever made also, so I had fun with it and I enjoyed it
 - The major thing I had to learn to get the JavaScript part working was to use event handlers and listeners to connect JavaScript functions to the HTML, in order to actually update the values and display results dynamically
-- I learned a lot about JavaScript in general, from its variable types, creating functions, conditionals, accessing HTML, ternary operators, comparisons, logical operators, and so on
+- I learned a lot about JavaScript in general, from its variable types, creating functions, conditionals, accessing HTML, ternary operators, comparisons, logical operators, lambda functions, for loops, and so on
 - It also gave me a lot more experience in HTML and CSS, with how to make elements visually appealing, using media quaries and vw to make the page responsive, using CSS to create animations, and learned how there are so much more possibilities with HTML and CSS when it is combined together with JavaScript
 - I had various challenges throughout the whole process. There were various types of challenges, including technical, design-wise, and logical problem. 
     - Technical problems: lots of bugs in the code that were caused by the various state changes through the gameplay, used a lot of "console.log" to locate the errors and debug. Was a challenge to get the dice animation and retrieving its final value each time. 
