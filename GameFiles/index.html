@@ -26,29 +26,77 @@
     </div>
 
     <div class="tools">
-        <button class="btn rules">Rules</button>
+        <button onclick="openModal('rulesModal')" class="btn rules">Rules</button>
         <button id="newGameButton" class="btn newGame">New Game</button>
         <button id="resetButton" class="btn resetScore">Reset Score</button>
-        <button class="btn settings">Settings</button>
+        <button onclick="openModal('settingsModal')" class="btn settings">Settings</button>
+    </div>
+
+    <div id="rulesModal" class="modal">
+      <div class="modalBody">
+          <h1>RULES</h1>
+          <div>These are the rules...</div>
+          <button onclick="closeModal()" class="closeBtn">Close</button>
+      </div>
+    </div>
+
+    <div id="settingsModal" class="modal">
+      <div class="modalBody">
+          <h1>SETTINGS</h1>
+
+          <div class="settingsContent">
+              <div class="newNames1">
+                  <div class="newNames2">
+                    <input type="text" id="p1NameInput" placeholder="Enter Player 1 Name">
+                    <input type="text" id="p2NameInput" placeholder="Enter Player 2 Name">
+                  </div>
+                  <button class="settingsB" onclick="changePlayerNames()">Change Names</button>
+              </div>
+              <div>
+                  <input type="text" id="targetInput" placeholder="Enter Target Score">
+                  <button class="settingsB" onclick="changeTargetScore()">Change Target</button>
+              </div>
+              <div>
+                  <input type="text" id="bombInput" placeholder="Value between 1 and 6">
+                  <button class="settingsB" onclick="changeBomb()">Change Bomb</button>
+              </div>
+          </div>
+          
+          <button onclick="closeModal()" class="closeBtn">Close</button>
+      </div>
+    </div>
+
+    <div id="winnerModal" class="modal">
+      <div class="modalBody">
+          <h3 id="winner"></h3>
+          <div id="winMsg"></div>
+          <button onclick="closeModal()" class="closeBtn">Close</button>
+      </div>
     </div>
 
     <div class="content">
         <div id="pBoxL" class="playerBox left">
             <div id="p1WC" class="count left">Wins: 0</div>
-            <h3 class="playerName">Player 1</h3>
+            <h3 id="p1Name" class="playerName">Player 1</h3>
             <div id="p1GT" class="gameTotal">0</div>
             <div class="turnBox">
                 <div class="turnTitle">Turn Total</div>
                 <div id="p1TT" class="turnScore">0</div>
             </div>
             <div class="progress"> 
-                <div class="bar left">76%</div> 
+                <div id="leftBar" class="bar">0%</div> 
             </div> 
         </div>
         <div class="middle">
-            <img src="../images/dice1.png" alt="a dice face" class="diceFace">
-            <img src="../images/dice5.png" alt="a dice face" class="diceFace">
-            <div id="rollResult"></div>
+            <div id="displayTarget">Target: 50</div>
+            <div id="displayBomb">Bomb: 3</div>
+            <img src="../images/dice1.png" alt="a dice face" id="d1" class="diceFace">
+            <img src="../images/dice2.png" alt="a dice face" id="d2" class="diceFace">
+            <img src="../images/dice3.png" alt="a dice face" id="d3" class="diceFace">
+            <img src="../images/dice4.png" alt="a dice face" id="d4" class="diceFace">
+            <img src="../images/dice5.png" alt="a dice face" id="d5" class="diceFace">
+            <img src="../images/dice6.png" alt="a dice face" id="d6" class="diceFace">
+ 
             <div class="triangles">
               <img src="../images/leftTri.png" alt="left pointing triangle" id="leftT" class="left tri">
               <img src="../images/rightTri.png" alt="right pointing triangle" id="rightT" class="right tri">
@@ -58,14 +106,14 @@
         </div>
         <div id="pBoxR" class="playerBox right">
             <div id="p2WC" class="count right">Wins: 0</div>
-            <h3 class="playerName">Player 2</h3>
+            <h3 id="p2Name" class="playerName">Player 2</h3>
             <div id="p2GT" class="gameTotal">0</div>
             <div class="turnBox">
                 <div class="turnTitle">Turn Total</div>
                 <div id="p2TT" class="turnScore">0</div>
             </div>
             <div class="progress"> 
-                <div class="bar right">12%</div> 
+                <div id="rightBar" class="bar">0%</div> 
             </div> 
         </div>
     </div>

@@ -16,13 +16,19 @@ button {
     background-color: #2E9CCA;
     color: #FFF;
     border: 0;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 3px #50514F;
+    outline: none;
     padding: 10px 15px;
     text-align: center;
     border: 2px solid black;
+    transition: .3s;
 }
-button:hover {
+button:hover, button:active {
+    outline: none;
+    background: #50514F;
     cursor: pointer;
+    transform: translateY(5px); 
 }
 
 .header {
@@ -61,6 +67,57 @@ button:hover {
     text-align: center;
 }
 
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    overflow: auto;
+}
+.modal.open {
+    display: block;
+}
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background: white;
+    border-radius: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.closeBtn {
+    width: 10vw;
+    margin-top: 50px;
+}
+body.modalOpened {
+    overflow: hidden;
+}
+.settingsContent {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.settingsB {
+    margin-left: 20px;
+}
+.newNames1 {
+    display: flex;
+    gap: 5px;
+}
+.newNames2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .content {
     display: flex;
     justify-content: center;
@@ -87,12 +144,13 @@ button:hover {
     text-align: center;
     font-size: 35px;
     margin: 0;
+    margin-top: 20px;
     padding: 15px;
 }
 .gameTotal {
     text-align: center;
     font-size: 7vw;
-    margin: 50px auto 30px;
+    margin: 70px auto 20px;
 }
 .turnBox {
     background-color: #f6e4ad;
@@ -100,6 +158,7 @@ button:hover {
     border-radius: 7px;
     width: 10vw;
     padding: 15px;
+    margin-top: 60px;
 }
 .turnTitle {
     text-align: center;
@@ -114,7 +173,7 @@ button:hover {
     background-color: antiquewhite; 
     width: 85%; 
     border-radius: 15px; 
-    margin-top: 20px;
+    margin-top: 90px;
 }
 .bar { 
     background-color:limegreen; 
@@ -124,11 +183,11 @@ button:hover {
     font-size: 20px; 
     border-radius: 15px; 
 }
-.bar.left { 
-    width: 76%; 
+#leftBar { 
+    width: 10%; 
 }
-.bar.right {
-    width: 12%;
+#rightBar {
+    width: 10%;
 }
 
 .middle {
@@ -139,6 +198,8 @@ button:hover {
 }
 .diceFace {
     width: 10vw;
+    display: none;
+    transition: 0.5s ease-in-out;
 }
 
 .triangles {
@@ -175,6 +236,9 @@ button:hover {
     .diceFace {
         width: 80px;
     }
+    .closeBtn {
+        width: auto;
+    }
 }
 
 @media (max-width: 600px) {
@@ -204,6 +268,18 @@ button:hover {
     }
     .footer {
         font-size: 15px;
+    }
+    .settingsContent {
+        align-items: center;
+    }
+    .settingsB {
+        margin-top: 7px;
+    }
+}
+
+@media (max-width: 417px) {
+    .newNames1 {
+        flex-direction: column;
     }
 }
 
