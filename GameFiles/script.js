@@ -102,7 +102,7 @@ function restartGame() {
     pastRolls.innerHTML = "";
     historyArr = [];
     mostRolled.innerHTML = "HOTTEST NUMBER: ";
-    leastRolled.innerHTML = "COLDEST NUMBER: "
+    leastRolled.innerHTML = "COLDEST NUMBER: ";
     
     turnCheck(); //show the current player
     progressBar(); //update progress bar
@@ -180,22 +180,22 @@ function randNumGen() {
             rolls = Math.floor(Math.random() * 6) + 1;
             //only display the dice face corresponding to the roll, and hide every other faces
             if (rolls == 1) {
-                d1.style.display = "block"
+                d1.style.display = "block";
                 d2.style.display = d3.style.display = d4.style.display = d5.style.display = d6.style.display = "none";
             } else if (rolls == 2) {
-                d2.style.display = "block"
+                d2.style.display = "block";
                 d1.style.display = d3.style.display = d4.style.display = d5.style.display = d6.style.display = "none";
             } else if (rolls == 3) {
-                d3.style.display = "block"
+                d3.style.display = "block";
                 d1.style.display = d2.style.display = d4.style.display = d5.style.display = d6.style.display = "none";
             } else if (rolls == 4) {
-                d4.style.display = "block"
+                d4.style.display = "block";
                 d1.style.display = d2.style.display = d3.style.display = d5.style.display = d6.style.display = "none";
             } else if (rolls == 5) {
-                d5.style.display = "block"
+                d5.style.display = "block";
                 d1.style.display = d2.style.display = d3.style.display = d4.style.display = d6.style.display = "none";
             } else if (rolls == 6) {
-                d6.style.display = "block"
+                d6.style.display = "block";
                 d1.style.display = d2.style.display = d3.style.display = d4.style.display = d5.style.display = "none";
             }
             //assign to be used outside of this function
@@ -256,7 +256,7 @@ function endTurn() {
                 pastRolls.innerHTML = "";
                 historyArr = [];
                 mostRolled.innerHTML = "HOTTEST NUMBER: ";
-                leastRolled.innerHTML = "COLDEST NUMBER: "
+                leastRolled.innerHTML = "COLDEST NUMBER: ";
             }, 0);
         }
 
@@ -269,7 +269,7 @@ function endTurn() {
 
 // Function to display the correct winner and score (Custon Animation)
 function winAlert(winnerName, winnerScore, loserScore) {
-    winner.innerHTML = "CONGRATS, " + winnerName + " wins!"
+    winner.innerHTML = "CONGRATS, " + winnerName + " wins!";
     winMsg.innerHTML = "The score is now " + winnerScore + " : " + loserScore;
 }
 

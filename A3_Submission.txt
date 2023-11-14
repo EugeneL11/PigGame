@@ -9,6 +9,6 @@ Link to hosted page of game: https://eugenel11.github.io/PigGame/GameFiles/index
 
 Name of the Online Repository: PigGame
 
-* The HTML, CSS, and JavaScript files for A3 is in the GameFiles folder, please look in here and not UI_Design *
+* The HTML, CSS, and JavaScript files for A3 are in the GameFiles folder, please look in here and not UI_Design *
 * It is the same repository as A2, but with updated files in a separate folder *
 * The README.md, explanation.md, and reflect.md are in the root directory *
