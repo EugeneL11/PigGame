@@ -98,7 +98,7 @@ function restartGame() {
     resetScore(); //reset the score to 0:0
 }
 
-// Function to roll the dice (async to wait for randNumGen to finish)
+// Function to roll the dice (async to wait for randNumGen to finish) (Custom Interaction Mechanism)
 async function rollDice() {
     //await for the randNumGen to finish executing and come to one final value before proceeding
     rollValue = await randNumGen();
@@ -129,7 +129,7 @@ async function rollDice() {
     }
 }
 
-// Function to display the dice shuffle and randomize one value
+// Function to display the dice shuffle and randomize one value (Custom Animation) (Custom Algorithm)
 function randNumGen() {
     //to go with the async functions, allows this function to finish completely before other code can proceed
     return new Promise((resolve) => {
@@ -169,7 +169,7 @@ function randNumGen() {
     });
 }
 
-// Function to end the turn and add turnTotal to the player's score
+// Function to end the turn and add turnTotal to the player's score (Custom Interaction Mechanism) (Custom Algorithm)
 function endTurn() {
     //only functions if the other player rolls at least once
     if (turnTotal !== 0) {
@@ -221,13 +221,13 @@ function endTurn() {
     }
 }
 
-// Function to display the correct winner and score
+// Function to display the correct winner and score (Custon Animation)
 function winAlert(winnerName, winnerScore, loserScore) {
     winner.innerHTML = "CONGRATS, " + winnerName + " wins!"
     winMsg.innerHTML = "The score is now " + winnerScore + " : " + loserScore;
 }
 
-// Function to indicate the current player visually
+// Function to indicate the current player visually (Custom Animation)
 function turnCheck() {
     if (p1Turn === true) { //if it is player one
         leftTri.style.display = "block"; //point to p1
@@ -242,7 +242,7 @@ function turnCheck() {
     }
 }
 
-// Function to update the progressa bar
+// Function to update the progress bar (Custom Animation) (Custom Algorithm)
 function progressBar() {
     leftVal = Math.round(p1TotalVal / targetScore * 100); //calculate current percentage relative to target
     leftBarVal = (leftVal < 100) ? leftVal : 100; //if it is above a 100, display a 100
@@ -256,7 +256,7 @@ function progressBar() {
     rightBar.style.width = rightBarVal + "%";
 }
 
-// Function to reset the game score
+// Function to reset the game score (Custom Interaction Mechanism)
 function resetScore() {
     // Reset player scores and win counts
     p1WinCountVal = 0;
@@ -265,24 +265,24 @@ function resetScore() {
     p2WinCount.innerHTML = "Wins: 0";
 }
 
-// Function to open the modals (pop-up)
+// Function to open the modals (pop-up) (Custom Animation)
 function openModal(id) {
-    //add open as a class
-    document.getElementById(id).classList.add('open');
-    //also add modalOpened
-    document.body.classList.add('modalOpened');
+    //show the modal
+    document.getElementById(id).style.display = "block";
+    //disable background scroll
+    document.body.style.overflow = "hidden";
 }
 
-// Function to close the modals
-function closeModal() {
-    //remove open as a a class
-    document.querySelector('.modal.open').classList.remove('open');
-    //also remove modalOpened
-    document.body.classList.remove('modalOpened');
+// Function to close the modals (Custom Animation)
+function closeModal(id) {
+    //hide the modal
+    document.getElementById(id).style.display = "none";
+    //re-enable background scroll
+    document.body.style.overflow = "visible";
 }
 
 
-// Function to change player names
+// Function to change player names (Custom Interaction Mechanism)
 function changePlayerNames() {
     //get the new name value
     p1NewName = document.getElementById("p1NameInput").value;
@@ -295,7 +295,7 @@ function changePlayerNames() {
     document.getElementById("p2NameInput").value = '';
 }
 
-// Function to change the target score
+// Function to change the target score (Custom Interaction Mechanism)
 function changeTargetScore() {
     //get the new target value
     newTarget = document.getElementById("targetInput").value;
@@ -317,7 +317,7 @@ function changeTargetScore() {
     progressBar();
 }
 
-// Function to change the bomb number
+// Function to change the bomb number (Custom Interaction Mechanism)
 function changeBomb() {
     //get the new bomb value
     newBomb = document.getElementById("bombInput").value;

@@ -1,0 +1,14 @@
+SENG 513 Assignment 3 Code Explanation - Eugene Lee (30137489)
+1. Dice Roll
+- When the roll dice button is clicked, it calls the rollDice() function, which calls the randNumGen() in its first line. The rollDice() function is async so that it can use await. The await will allow us to wait for the randNumGen() function to arrive at a certain value before proceeding on. It pauses the execution until the Promise returned by randNumGen() is resolved. The randNumGen() function uses a Promise object, which represents a value that may not be available for use yet, but will be resolved later on. The resolve function is called when the setTimeout is executed, with the random value passed in as the argument. 
+- To create the dice shuffle animation, I put all six dice faces in the HTML, and hide all but one to display just the one dice on the screen. I use setInterval() and setTimeout() to rapidly go through different dice faces, finally arriving at one in the end. For the final roll value, I would show the corresponding dice face while hiding all the other ones. 
+
+2. Progress Bar
+- the progress bar is complex both design-wise and logic-wise. Very involved functionality. 
+- essentially create a rounded bar, and alter the internal green bar accordingly, while matching the progress percentage of a player.
+- every time a player's turn ends, get the current game total of the player, and divide it by the target score to get the progress. When a player exceeds the target score, their progress will be above a 100%, however that means they won and it still needs to show up as a 100%. When a player has less than 10% progress, the UI looks unappealing, so I color 10% of the bar always at minimum. These are done using ternary operators, which may look less intuitive, but it makes it neater and simpler than using if statements each time. Each time, I need to change the percentage text, and also the width of the internal green bar. 
+
+3. Pop-Up Modals
+- Since we are using just pure vanilla JavaScript, HTML, and CSS, I had to get creative to implement a pop-up modal. I had to imitate its characteristics. 
+- There exists one general modal template for all three of my modals (settings, winner, and rules). They have the same format, with just different content on the inside. They are included in the HTML file, but are just hidden from the page until the corresponding button is clicked to call it. When a button is clicked (or there is a winner), it calls the openModal() function with the outermost modal div's id passed in as a parameter. The function turns the display of that element on, showing the modal, and also disabling the background scroll. When the modal is closed, it hides the display of the element again, and then re-enable the background scroll. 
+- Makes sense once you understand how it works, and a pretty smart work-around to modals. 

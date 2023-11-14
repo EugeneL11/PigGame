@@ -24,6 +24,7 @@ button {
     border: 2px solid black;
     transition: .3s;
 }
+/* (Custom Animation) */
 button:hover, button:active {
     outline: none;
     background: #50514F;
@@ -76,9 +77,6 @@ button:hover, button:active {
     padding: 40px;
     overflow: auto;
 }
-.modal.open {
-    display: block;
-}
 .modalBody {
     display: flex;
     flex-direction: column;
@@ -90,14 +88,10 @@ button:hover, button:active {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
-
 }
 .closeBtn {
     width: 10vw;
     margin-top: 50px;
-}
-body.modalOpened {
-    overflow: hidden;
 }
 .settingsContent {
     margin-top: 35px;
